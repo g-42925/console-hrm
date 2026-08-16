@@ -14,7 +14,7 @@ interface Location {
 }
 
 export default function LocationList({ initialLocations }: { initialLocations: Location[] }) {
-  const [locations, setLocations] = useState<Location[]>(initialLocations);
+  const [locations] = useState<Location[]>(initialLocations);
   const [isMainLocation, setIsMainLocation] = useState<string>("0");
   const [editingLocation, setEditingLocation] = useState<Location | null>(null);
   const [locationId, setLocationId] = useState<string>("");
@@ -194,9 +194,9 @@ export default function LocationList({ initialLocations }: { initialLocations: L
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Apakah Lokasi Utama?</label>
-                  <select defaultValue={isMainLocation === "1" ? "1" : "0"} onChange={(e) => setIsMainLocation(Number(e.target.value))} className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all">
-                    <option value="0">Tidak</option>
-                    <option value="1">Ya</option>
+                  <select defaultValue={isMainLocation === "1" ? "1" : "0"} onChange={(e) => setIsMainLocation(e.target.value)} className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
                   </select>
                 </div>
               </div>
