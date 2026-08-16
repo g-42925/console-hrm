@@ -1,8 +1,5 @@
 "use client"
 
-
-import useGlobalStore from "@/store/global"
-
 import { useFormAction } from "@/hooks/useFormAction";
 import { loginAction, FormState } from "@/actions/login";
 import { Mail, Lock, Building2, ArrowRight, User } from "lucide-react";
