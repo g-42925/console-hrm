@@ -4,8 +4,8 @@ import AddCompanyButton from './AddCompanyButton';
 import LogoutButton from '@/components/LogoutButton';
 
 async function getCompanies() {
-  const res = await fetch('https://absensi.lerynsoftware.com/api/console/companylist', { 
-    cache: 'no-store' 
+  const res = await fetch('https://absensi.lerynsoftware.com/api/console/companylist', {
+    cache: 'no-store'
   });
   if (!res.ok) {
     throw new Error('Failed to fetch companies');
