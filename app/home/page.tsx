@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import AddLocationButton from './AddLocationButton';
 import AddCompanyButton from './AddCompanyButton';
 import LogoutButton from '@/components/LogoutButton';
@@ -40,7 +41,7 @@ export default async function HomePage() {
             <Link href={`/locations/${company.id}`} className="flex-1">
               <div className="flex items-center space-x-4 mb-4">
                 {company.logo && (
-                  <img src={company.logo} alt={company.company_name} className="w-12 h-12 rounded-full object-cover" />
+                  <Image src={company.logo} alt={company.company_name} className="w-12 h-12 rounded-full object-cover" />
                 )}
                 <h2 className="text-xl font-semibold">{company.company_name}</h2>
               </div>
