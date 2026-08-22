@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import AddActionButton from './AddActionButton'
 import AddLocationButton from './AddLocationButton';
 import AddCompanyButton from './AddCompanyButton';
 import LogoutButton from '@/components/LogoutButton';
-
 async function getCompanies() {
   const res = await fetch('https://absensi.lerynsoftware.com/api/console/companylist', {
     cache: 'no-store'
@@ -31,6 +31,7 @@ export default async function HomePage() {
       <div className="flex justify-between items-center">
         <h1 className="text-3xl font-bold tracking-tight">Perusahaan</h1>
         <div className="flex items-center gap-3">
+          <AddActionButton />
           <AddCompanyButton />
           <LogoutButton />
         </div>
